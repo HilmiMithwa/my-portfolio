@@ -2,9 +2,13 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import profilePicture from './images/foto_hilmi.png'
+
 
 
 const page = () => {
+
+
   return (
     <div>
       {/*Navbar*/}
@@ -45,12 +49,22 @@ const page = () => {
       </div>
 
       {/* Profile Picture */}
-
-      <div>
-        <div>
-            
-
+      <div className='flex justify-end mr-25 mt-[-650px]'>
+        <div className='border-[3px] w-[436px] h-[543px] border-oldBlueGans bg-oldBlueGans flex items-center justify-center rounded-[25px]'>
+          <CardContainer>
+            <CardItem>
+              <CardBody className="flex flex-col items-center justify-center">
+                <img src='/images/foto_hilmi.png' alt="Profile Picture" className='w-[327px] h-[384px]  object-cover rounded-[25px]'/>
+                <img src='/images/name.png' className='w-[219px] h-[30px] mt-5 border-youngBlueGans bg-youngBlueGans rounded-[25px] object-contain '  />
+              </CardBody>
+            </CardItem>
+          </CardContainer>
         </div>
+      </div>
+
+      {/* Skill Section */}
+      <div>
+        
       </div>
       
     </div>
