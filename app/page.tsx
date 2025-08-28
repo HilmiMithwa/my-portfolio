@@ -1,14 +1,14 @@
 "use client";
+
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { motion } from 'framer-motion';
 
-const page = () => {
-
-
+const Page = () => {
   return (
     <div>
-      {/*Navbar*/}
+      {/* Navbar */}
       <nav className='flex justify-between items-center bg-black m-20 text-[30px] font-sans-serif'>
         <h1 className='sf-pro'>Hilmi Mithwa</h1>
         <div>
@@ -21,32 +21,53 @@ const page = () => {
         </div>
       </nav>
 
-      {/*About me Section*/}
-
-      <div className='border mr-300 border-black m-20'>
+      {/* About me Section */}
+      <motion.div
+        className='border mr-300 border-black m-20'
+        initial={{ opacity: 0, y: 50 }}        
+        whileInView={{ opacity: 1, y: 0 }}     
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}              
+      >
         <h1 className='text-[75px] font-semibold'>
           Hey There,<br/> I'm Hilmi
         </h1>
         <h2 className='text-[35px]'>
           <Typewriter 
             options={{
-              strings: ['UI/UX Desginer', 'Front End Developer', 'Currenly deepening Machine learning'],
+              strings: [
+                'UI/UX Designer',
+                'Front End Developer',
+                'Currently deepening Machine Learning'
+              ],
               autoStart: true,
               loop: true,
             }}
-        />
+          />
         </h2>
         <p className='text-[20px] mt-5 text-justify'>
-          Iam an undergraduate Software Engineer student at Universitas Pendidikan Indonesia, passionate about building innovative solutions through technology. Currently, i’m deepening my skills on Machine Learning, exploring how intelligent system can solve real world problems.
+          I am an undergraduate Software Engineer student at Universitas Pendidikan Indonesia, passionate about building innovative solutions through technology. Currently, I’m deepening my skills on Machine Learning, exploring how intelligent system can solve real world problems.
         </p>
         
-        <button className='mt-10 border-blueGans border-2 p-5 rounded-[10px]'>
-          <a href='https://www.linkedin.com/in/hilmi-mithwa-ramadhan-4a1b46275/' className='text-[30px] font-light'>My LinkedIn</a>
-        </button>
-      </div>
+        <motion.button
+          className='mt-10 border-blueGans border-2 p-5 rounded-[10px]'
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <a href='https://www.linkedin.com/in/hilmi-mithwa-ramadhan-4a1b46275/' className='text-[30px] font-light'>
+            My LinkedIn
+          </a>
+        </motion.button>
+      </motion.div>
 
       {/* Profile Picture */}
-      <div className='flex justify-end mr-25 mt-[-650px]'>
+      <motion.div
+        className='flex justify-end mr-25 mt-[-650px]'
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <div className='border-[3px] w-[436px] h-[543px] border-oldBlueGans bg-oldBlueGans flex items-center justify-center rounded-[25px]'>
           <CardContainer>
             <CardItem>
@@ -57,23 +78,50 @@ const page = () => {
             </CardItem>
           </CardContainer>
         </div>
-      </div>
+      </motion.div>
 
       {/* Skill Section */}
-      <div className='flex justify-end mt-35 mr-25 flex-col'>
-        <h1 className='text-[75px]'>Tech Stack</h1>
-        <div id='skills-container' className='flex gap-10 mt-10'>
-          <img src='/images/next_logo.png' className='border-2 border-white rounded-lg'/>
-          <img src='/images/react_logo.png' className=''/>
-          <img src='/images/py_logo.png' />
-          <img src='/images/js_logo.png' />
-          <img src='/images/tailwind_logo.png' />
-          <img src='/images/figma_logo.png' />
+      <div className='flex items-center mt-35 mr-25 flex-col'>
+        <motion.h1
+          className='text-[75px] m-20 self-end'
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          Tech Stack
+        </motion.h1>
+
+        <div id='skills-container' className='flex gap-10 mt-10 flex-wrap justify-center'>
+          {[
+            "/images/next_logo.png",
+            "/images/react_logo.png",
+            "/images/py_logo.png",
+            "/images/js_logo.png",
+            "/images/tailwind_logo.png",
+            "/images/figma_logo.png",
+          ].map((src, i) => (
+            <motion.img
+              key={i}
+              src={src}
+              className='border-1 border-white rounded-[25px] p-20'
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: i * 0.2 }} 
+              viewport={{ once: true }}
+            />
+          ))}
         </div>
       </div>
-      
+
+      {/* Projects Section */}
+      <div id='projects-container'>
+
+      </div>
+
+
     </div>
   )
 }
 
-export default page
+export default Page;
