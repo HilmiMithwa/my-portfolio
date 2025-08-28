@@ -2,9 +2,6 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import profilePicture from './images/foto_hilmi.png'
-
-
 
 const page = () => {
 
@@ -63,8 +60,16 @@ const page = () => {
       </div>
 
       {/* Skill Section */}
-      <div>
-        
+      <div className='flex justify-end mt-35 mr-25 flex-col'>
+        <h1 className='text-[75px]'>Tech Stack</h1>
+        <div id='skills-container' className='flex gap-10 mt-10'>
+          <img src='/images/next_logo.png' className='border-2 border-white rounded-lg'/>
+          <img src='/images/react_logo.png' className=''/>
+          <img src='/images/py_logo.png' />
+          <img src='/images/js_logo.png' />
+          <img src='/images/tailwind_logo.png' />
+          <img src='/images/figma_logo.png' />
+        </div>
       </div>
       
     </div>
