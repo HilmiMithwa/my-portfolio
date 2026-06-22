@@ -1,11 +1,14 @@
 import React from "react";
+import Image from 'next/image';
+import logo from "../public/logo.png"
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="font-poppins text-[25px] ">
       <nav>
-        <ul>
-          <li>
+        <img src={logo.src} alt="logo" className="mb-[50px]"/>
+        <ul className="flex flex-col gap-[26px]">
+          <li className="flex gap-[13px] items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -18,7 +21,7 @@ export default function Navbar() {
             <a>Home</a>
           </li>
 
-          <li>
+          <li className="flex gap-[13px] items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -37,7 +40,7 @@ export default function Navbar() {
             <a>About Me</a>
           </li>
 
-          <li>
+          <li className="flex gap-[13px] items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -53,7 +56,7 @@ export default function Navbar() {
             <a>Experience</a>
           </li>
 
-          <li>
+          <li className="flex gap-[13px] items-center" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -69,7 +72,7 @@ export default function Navbar() {
             <a>Certificate</a>
           </li>
 
-          <li>
+          <li className="flex gap-[13px] items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
@@ -81,13 +84,13 @@ export default function Navbar() {
                 fill="#ffefef"
                 fill-rule="evenodd"
                 d="M16.868 1.02c.28-.048.568-.009.824.115l4.53 2.191c.475.23.778.715.778 1.247v14.855c0 .53-.303 1.014-.778 1.245l-4.53 2.19a1.35 1.35 0 0 1-1.562-.268l-8.672-7.95l-3.777 2.882a.915.915 0 0 1-1.17-.053L1.3 16.366a.93.93 0 0 1 0-1.362L4.574 12L1.3 8.995a.924.924 0 0 1 0-1.36l1.213-1.11a.916.916 0 0 1 1.169-.053l3.777 2.883l8.672-7.95c.2-.202.458-.337.738-.385M10.924 12l6.58 5.018v-.303H17.5V8.857h.003V6.98z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
             <a>Project</a>
           </li>
 
-          <li>
+          <li className="flex gap-[13px] items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"

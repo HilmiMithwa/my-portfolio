@@ -1,9 +1,11 @@
 @import url('https://googleapis.com');
 @import "tailwindcss";
+
 @theme  {
   --color-background-color: #000000;
   --color-white-color: #ffffff;
   --color-blue-color: #2176FF;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 body {
