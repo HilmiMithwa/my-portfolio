@@ -5,7 +5,9 @@
   --color-background-color: #000000;
   --color-white-color: #ffffff;
   --color-blue-color: #2176FF;
+  --color-secondary: #1E1E1E;
   --font-poppins: 'Poppins', sans-serif;
+  --font-rocksalt: 'Rock Salt', cursive;
 }
 
 body {
