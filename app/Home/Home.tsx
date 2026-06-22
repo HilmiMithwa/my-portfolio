@@ -19,7 +19,7 @@ export default function Home() {
                     <div className="flex-1 flex flex-col gap-4">
                         <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
                             Hello, my name is{" "}
-                            <span className="font-rocksalt text-blue-color inline-block mt-2 md:mt-0 ">
+                            <span className="font-rocksalt text-blue-color inline-block mt-2 md:mt-0 font-normal">
                                 Hilmi
                             </span>
                         </h1>
