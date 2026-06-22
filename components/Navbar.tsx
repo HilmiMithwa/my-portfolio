@@ -67,17 +67,16 @@ export default function Navbar() {
     },
   ];
 
-  return (  
+  return (
     <div className="font-poppins text-[25px] w-[217px] fixed left-10 top-1/2 -translate-y-1/2">
       <nav>
-        <Image   src={logo} alt="logo" className="mb-[50px]" />
+        <Image src={logo} alt="logo" className="mb-[50px]" />
         <ul className="flex flex-col gap-[26px]">
           {menuItems.map((item) => (
             <li
               key={item.name}
-              className={` rounded-[15px] w-[217px] h-[52px]  flex gap-[13px] items-center hover:bg-secondary cursor-pointer transition-colors duration-200 ${
-                activeMenu === item.name ? "bg-secondary" : ""
-              }`}
+              className={` rounded-[15px] w-[217px] h-[52px]  flex gap-[13px] items-center hover:bg-secondary cursor-pointer transition-colors duration-200 ${activeMenu === item.name ? "bg-secondary" : ""
+                }`}
               onClick={() => setActiveMenu(item.name)}
             >
               {item.icon}
