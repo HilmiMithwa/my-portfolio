@@ -45,7 +45,7 @@ const itemVariants = {
 
 export default function About() {
     return (
-        <div className="w-full max-w-[1109px] px-4 py-8">
+        <div className="w-full  px-4 py-8">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

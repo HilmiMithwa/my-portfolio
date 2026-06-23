@@ -7,11 +7,12 @@ import Navbar from '../components/Navbar';
 import Home from './Home/Home';
 import About from './About/About';
 import Intro from './Intro/Intro';
+import Experience from './Experience/Experience';
 
 export default function page() {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Prevent scrolling while loading, restore when loaded
+  
   useEffect(() => {
     if (isLoading) {
       document.body.style.overflow = 'hidden';
@@ -38,8 +39,9 @@ export default function page() {
           <div className='mb-[324px]'>
             <Home />
           </div>
-          <div>
+          <div className='flex flex-col gap-[140px]'>
             <About />
+            <Experience />
           </div>
         </main>
       </div>
