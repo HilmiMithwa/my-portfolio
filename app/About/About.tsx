@@ -60,7 +60,7 @@ export default function About() {
                 </div>
             </motion.div>
 
-            
+
             <motion.div
                 variants={containerVariants}
                 initial="hidden"

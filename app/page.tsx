@@ -1,12 +1,37 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import Navbar from '../components/Navbar';
 import Home from './Home/Home';
 import About from './About/About';
+import Intro from './Intro/Intro';
 
 export default function page() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Prevent scrolling while loading, restore when loaded
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLoading]);
+
   return (
     <>
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Intro onComplete={() => setIsLoading(false)} />
+        )}
+      </AnimatePresence>
+
       <div className='flex min-h-screen max-w-full'>
         <Navbar />
         <main className='flex-1 ml-[300px] p-8'>
@@ -16,9 +41,9 @@ export default function page() {
           <div>
             <About />
           </div>
-          
         </main>
       </div>
     </>
-  )
+  );
 }
+
